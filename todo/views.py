@@ -9,6 +9,9 @@ def home(request):
     context={'tareas':tareas}
     return render(request, 'todo/home.html', context)
 
+def login(request):
+    return redirect('login.html')
+
 def agregar(request):
     if request.method == "POST":
         form = TareaForm(request.POST)
